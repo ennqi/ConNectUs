@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # web-project
+=======
+# week7p2
+>>>>>>> a5c899038d220c31ce0c0516eca19707106c882b
 
 ## Project setup
 ```

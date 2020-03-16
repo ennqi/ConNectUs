@@ -1,6 +1,11 @@
 .DS_Store
+<<<<<<< HEAD
 node_modules
 /dist
+=======
+node_modules/
+/dist/
+>>>>>>> a5c899038d220c31ce0c0516eca19707106c882b
 
 # local env files
 .env.local
@@ -18,4 +23,8 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+<<<<<<< HEAD
 *.sw?
+=======
+*.sw*
+>>>>>>> a5c899038d220c31ce0c0516eca19707106c882b

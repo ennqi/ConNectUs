@@ -1,47 +1,70 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white" style = " height:130px">
-  <a class="navbar-brand" href="#">conNectUS</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#" style = "color:rgba(0,0,0,100);">Home</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" style = "color:rgba(0,0,0,100);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" style = "color:rgba(0,0,0,100);" >Account</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" style = "color:rgba(0,0,0,100);" type="submit">Search </button>
-    </form>
+  <div class="headerStyle">
+        <nav>
+          <h1>{{ title }}</h1>
+          <ul>
+             <li><router-link to="/home" exact>Home</router-link></li>
+             <li><router-link to="/modules" exact>Modules</router-link></li>
+             <li><router-link to="/account" exact>Account</router-link></li>
+          </ul>
+        </nav>
   </div>
-</nav>
 </template>
 
+<script>
+export default {
+  
+  data(){
+    return{
+        msg: 'Modules Individual Page'
+        }
+  },
+  props:{
+    title:{
+      type:String
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.navbar-brand {
-    font-size:3rem;
-    font-family:"Poppins";
+header{
+    background:rgb(255, 255, 255);
+    padding:6px;
+    border-style: solid;
+    border-color:rgb(255, 255, 255);
+    border-width: 2px;
 }
-.nav-link {
-    font-family:"Poppins";
-    color:black;
+h1{
+    color:ivory;
+    background:  ivory;
+    font-size: 30px;
 }
-
+nav{
+    background: rgb(255, 255, 255);
+    padding: 14px 0;
+    margin-bottom: 40px;
+}
+.router-link-active{
+    background: ivory;
+    color: #444;
+}
+ul{
+    list-style-type: none;
+    text-align: right;
+    margin: 0;
+}
+li{
+    background-color:gray;
+    display: inline-block;
+    margin: 0 10px;
+}
+li a{
+  
+  font-size: 18px;
+  color:ivory;
+    
+}
 </style>
+
